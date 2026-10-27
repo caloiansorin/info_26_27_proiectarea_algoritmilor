@@ -6,7 +6,6 @@ def bubble_sort(lista):
             if lista[j] > lista[j + 1]:
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]
                 schimbat = True
-        # Daca nu s-a facut nicio schimbare, lista e deja sortata
         if not schimbat:
             break
     return lista
