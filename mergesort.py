@@ -25,4 +25,4 @@ def merge(st,dr):
     rezultat.extend(dr[j:])
     return rezultat
 
-print (mergesort(rezultat))
+print (mergesort(lista))
