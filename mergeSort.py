@@ -35,4 +35,4 @@ def merge_sort(v):
             k += 1
     
 #afiseaza vectorul sortat
-print("Vectorul sortat:", v)
+print("Vectorul sortat:", merge_sort(v))
