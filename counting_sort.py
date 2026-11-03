@@ -1,9 +1,3 @@
-"""
-
-Parcurgerea 1: numărăm de câte ori apare fiecare valoare.
-Parcurgerea 2: trecem prin vectorul de frecvență și rescriem
-
-"""
 
 
 def counting_sort(a):
