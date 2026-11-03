@@ -15,6 +15,6 @@ def countingSort(arr):
 
     return arr
 
-unsortedArr = [4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3]
-sortedArr = countingSort(unsortedArr)
-print("Sorted array:", sortedArr)
+sirNesortat = [4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3]
+sirSortat = countingSort(sirNesortat)
+print("Sorted array:", sirSortat)
