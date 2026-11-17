@@ -1,22 +1,26 @@
-def Partitioneaza(A, st, dr) :
-    pivot = A[dr]
-    i = st - 1
-    
-    for j in range(st, dr) :
-        if A[j] <= pivot :
-            i = i + 1
-            A[i], A[j] = A[j], A[i]
-             
-    A[i + 1], A[dr] = A[dr], A[i + 1]
-    return i + 1
+def Rastoarna(A, st, dr) :
+    while st < dr :
+        A[st], A[dr] = A[dr], A[st]
+        st = st + 1
+        dr = dr - 1
 
-def Quick_Sort(A, st, dr) :
-    if st < dr :
-        q = Partitioneaza(A, st, dr)
-        Quick_Sort(A, st, q - 1)
-        Quick_Sort(A, q + 1, dr)
+def Gaseste_Maxim(A, st, dr) :
+    max_idx = st
+    for j in range(st + 1, dr + 1) :
+        if A[j] > A[max_idx] :
+            max_idx = j
+    return max_idx
+
+def Pancake_Sort(A, st, dr) :
+    for i in range(dr, st, -1) :
+        max_idx = Gaseste_Maxim(A, st, i)
+        
+        if max_idx != i :
+            if max_idx != st :
+                Rastoarna(A, st, max_idx)
+            Rastoarna(A, st, i)
         
         
-vector = [1, 9, 0 , 3, 12, 4]
-Quick_Sort(vector,0,len(vector) - 1)
+vector = [3, 2, 4, 1, 5]
+Pancake_Sort(vector, 0, len(vector) - 1)
 print(vector)
